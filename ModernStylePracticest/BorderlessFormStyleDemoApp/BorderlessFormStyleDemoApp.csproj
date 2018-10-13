@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD87B572-08EB-4B7D-98E1-7AFDE85D9AC1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BorderlessFormStyleDemoApp</RootNamespace>
+    <AssemblyName>BorderlessFormStyleDemoApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReduxModernBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Root\static\css\app.0d971e578ddb0ddc601ae982328e6221.css.map" />
+    <EmbeddedResource Include="Root\static\js\vendor.ed8508c10eb328d03f40.js.map" />
+    <EmbeddedResource Include="Root\static\js\app.b1e7d3fcd39d4e9487ec.js.map" />
+    <EmbeddedResource Include="Root\static\js\manifest.3d0bf1f0251a61f2e3da.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Root\static\js\app.b1e7d3fcd39d4e9487ec.js" />
+    <EmbeddedResource Include="Root\static\js\manifest.3d0bf1f0251a61f2e3da.js" />
+    <EmbeddedResource Include="Root\static\js\vendor.ed8508c10eb328d03f40.js" />
+    <EmbeddedResource Include="Root\static\css\app.0d971e578ddb0ddc601ae982328e6221.css" />
+    <EmbeddedResource Include="Root\index.html" />
+    <None Include="Resources\ChromFXUI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CFActions\CFActions.csproj">
+      <Project>{e77817a1-4a9c-4042-b7de-7a8a85372a8b}</Project>
+      <Name>CFActions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChromFXUI\ChromFXUI.csproj">
+      <Project>{f08bb3ec-8bd4-4af0-ac3f-49af44917324}</Project>
+      <Name>ChromFXUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Package\Packages.csproj">
+      <Project>{c706e8b9-d1fa-4149-8277-b47764826cc2}</Project>
+      <Name>Packages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReduxCore\ReduxCore.csproj">
+      <Project>{0ae46835-b2ae-4913-a98f-b68b7b3234f3}</Project>
+      <Name>ReduxCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TenantReducer\CTReducer.csproj">
+      <Project>{516cce2d-e3c5-469c-99d9-5de8836dc21d}</Project>
+      <Name>CTReducer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Root\static\fonts\" />
+    <Folder Include="Root\static\img\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
