@@ -6,6 +6,7 @@
 ## 解决方案灵感
   目前web前端开发界面开发繁荣发展，比传统桌面端开发效率高、颜值高、稳定且功能丰富。如果能将web前端作为传统UI设计的替代就非常完美了，实践证明也确实非常好。借助chrome的cef，能很好的解决此问题。但是这样会引入js代码的问题思考。如果将传统PC端APP开发中的Controller控制模块用js实现，那肯定是个灾难性的场面。必定会引发问题定位麻烦，代码不好维护管理等问题。**Redux**简单而纯粹的架构思想能完美解决此问题。在此项目框架中，web端所有的页面及控件所使用的js,html,css代码仅定位于实现控件逻辑及UI效果，通过数据绑定驱动其更新。web端的数据管理问题是个头疼的事情，在这里使用Redux和vue的有机搭配完美处理了此问题。所有的web均使用vue提供的**MVVM**功能，UI更新由Redux的State更新而驱动。Controller模块使用强类型的C#语言实现，且易于调试测试。额外优势是可以动态从静态资源服务器获取资源更新内容，这算是利用了h5的 一大特点吧。
 ## _混合框架架构_
+这是一个基于CEF的桌面混合架构，有机结合多种技术的优势，解决PC开发中一直困扰的诸多问题。
 ![混合架构图](https://github.com/jiahengaa/ReduxStyleChromeFxUI/blob/master/DemoShot/architecture%20.png)
 ## Demo shot
 ![example1.png](https://github.com/jiahengaa/ReduxStyleChromeFxUI/blob/master/DemoShot/example1.png)
