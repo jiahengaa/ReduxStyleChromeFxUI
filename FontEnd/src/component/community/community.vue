@@ -227,10 +227,6 @@ export default  {
 			  console.log("methods:"+methods)
 			  methods.updateData(this.$data,data)
 		  })
-		   this.$root.eventHub.$on('status',data=>{
-			  console.log(status);
-			  methods.showMessage(status)
-		  })
 	  })
   },
   created() {

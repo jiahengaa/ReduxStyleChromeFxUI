@@ -66,10 +66,6 @@ export default {
               console.log('tenant data:'+data)
 			  methods.updateData(this.$data,data)
 		  })
-		  this.$root.eventHub.$on('status',data=>{
-			  console.log(status);
-			  methods.showMessage(status)
-		  })
 	  })
   },
   created() {

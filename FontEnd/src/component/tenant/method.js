@@ -67,20 +67,5 @@ export default {
 			console.log("data[" + item + "]:" + data[item])
 			vm[item] = data[item];
 		}
-	},
-	showMessage(status) {
-		//判断是否属于本模块
-		if (status.module === 'tenant') {
-			//如果eventName为空默认都是弹窗，否则做针对性提示处理，比如表格标红等操作
-			if (eventName === '' || eventName === null) {
-				this.$message({
-					type: status.type,
-					message: status.message
-				});
-			}
-			else {
-				//特殊操作
-			}
-		}
 	}
 }
