@@ -1,8 +1,8 @@
 # ReduxStyleChromeFxUI
     Do Something Funny!
 
-    更高效，更简洁，更现代化PC端桌面开发。
-    采用redux设计模式，采用chrome为UI内核渲染，采用ElementUI为前端渲染，采用Vue为前端双向绑定，采用前端“热加载”快速开发。
+  更高效，更简洁，更现代化PC端桌面开发。
+  采用redux设计模式，采用chrome为UI内核渲染，采用ElementUI为前端渲染，采用Vue为前端双向绑定，采用前端“热加载”快速开发。
 
 ## 背景问题
     在C#.net传统PC开发中还在苦恼缓慢，界面UI老旧不易美化的问题吗？
@@ -20,8 +20,8 @@
 ![example1.png](https://github.com/jiahengaa/ReduxStyleChromeFxUI/blob/master/DemoShot/example1.png)
 ## 负面效应
     当然所有的框架都会有其缺点，此框架也不例外。
-    1.所使用技术内容涵盖非常广而杂，给研发人员带来挑战；
-    2.纯web前端开发人员得学会使用C#语言，或者c#语言的非web开发人员得了解前端开发，混合型人才就不担心这个问题啦；
-    3.web端的调试问题，但是在框架中使用**mock**来绕道解决此问题，使得web开发不绝对依赖C#端的Controller的Api的完成；
-    4.应用程序的打包大小等于chrome cef的内核大小 + 引用项目dll + web资源包大小，基本上在230M以上。但是引用了DevExpress等架构库，带来的麻烦不必这个小，而且会有很多dll依赖、性能、发布问题。
+  1.所使用技术内容涵盖非常广而杂，给研发人员带来挑战；
+  2.纯web前端开发人员得学会使用C#语言，或者c#语言的非web开发人员得了解前端开发，混合型人才就不担心这个问题啦；
+  3.web端的调试问题，但是在框架中使用**mock**来绕道解决此问题，使得web开发不绝对依赖C#端的Controller的Api的完成；
+  4.应用程序的打包大小等于chrome cef的内核大小 + 引用项目dll + web资源包大小，基本上在230M以上。但是引用了DevExpress等架构库，带来的麻烦不必这个小，而且会有很多dll依赖、性能、发布问题。
 
