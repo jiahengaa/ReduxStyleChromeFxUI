@@ -46,6 +46,7 @@
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -57,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\Config.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,9 +106,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Root\static\css\app.0d971e578ddb0ddc601ae982328e6221.css.map" />
-    <EmbeddedResource Include="Root\static\js\vendor.ed8508c10eb328d03f40.js.map" />
-    <EmbeddedResource Include="Root\static\js\app.b1e7d3fcd39d4e9487ec.js.map" />
-    <EmbeddedResource Include="Root\static\js\manifest.3d0bf1f0251a61f2e3da.js.map" />
+    <EmbeddedResource Include="Root\static\js\vendor.376ceac13b436390b82e.js.map" />
+    <EmbeddedResource Include="Root\static\js\app.bdab19f6c1398a6c628b.js.map" />
+    <EmbeddedResource Include="Root\static\js\manifest.3941632e40776fc4fff5.js.map" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -114,9 +116,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Root\static\js\app.b1e7d3fcd39d4e9487ec.js" />
-    <EmbeddedResource Include="Root\static\js\manifest.3d0bf1f0251a61f2e3da.js" />
-    <EmbeddedResource Include="Root\static\js\vendor.ed8508c10eb328d03f40.js" />
     <EmbeddedResource Include="Root\static\css\app.0d971e578ddb0ddc601ae982328e6221.css" />
     <EmbeddedResource Include="Root\index.html" />
     <None Include="Resources\ChromFXUI.png" />
@@ -146,6 +145,13 @@
   <ItemGroup>
     <Folder Include="Root\static\fonts\" />
     <Folder Include="Root\static\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Root\static\js\vendor.376ceac13b436390b82e.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Root\static\js\app.bdab19f6c1398a6c628b.js" />
+    <EmbeddedResource Include="Root\static\js\manifest.3941632e40776fc4fff5.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

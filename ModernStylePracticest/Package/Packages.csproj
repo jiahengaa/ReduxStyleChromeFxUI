@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="AppState.cs" />
     <Compile Include="AppTab.cs" />
+    <Compile Include="ChartState.cs" />
+    <Compile Include="ChartDetail.cs" />
     <Compile Include="Community.cs" />
     <Compile Include="CommunityFilter.cs" />
     <Compile Include="CommunityFrom.cs" />
@@ -49,6 +51,7 @@
     <Compile Include="DefaultCommunityFrom.cs" />
     <Compile Include="EditFrom.cs" />
     <Compile Include="ExtraAction.cs" />
+    <Compile Include="ItemDetail.cs" />
     <Compile Include="Pagination.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReducerStatus.cs" />

@@ -6,6 +6,6 @@ namespace Packages
     {
         public CommunityState community; 
         public TenantState tenant;
-        public ReducerStatus status;
+        public ChartState chart;
     }
 }

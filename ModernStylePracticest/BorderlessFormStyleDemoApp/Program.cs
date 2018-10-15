@@ -19,15 +19,25 @@ namespace BorderlessFormStyleDemoApp
 			Application.SetCompatibleTextRenderingDefault(false);
 
 			System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-CN");
-
-			if (Bootstrap.Load())
-			{
-				Bootstrap.RegisterAssemblyResources(System.Reflection.Assembly.GetExecutingAssembly(), "Root");
-				Bootstrap.RegisterFolderResources(Application.StartupPath);
-				
-				Application.Run(new Form1(new Package<AppState>(new AppStateReducer())));
+            Config.InitConfig();
+            if (Config.IsDebug)
+            {
+                if (Bootstrap.Load())
+                {
+                    Application.Run(new Form1(new Package<AppState>(new AppStateReducer())));
+                }
+                
             }
+            else
+            {
+                if (Bootstrap.Load())
+                {
+                    Bootstrap.RegisterAssemblyResources(System.Reflection.Assembly.GetExecutingAssembly(), "Root");
+                    Bootstrap.RegisterFolderResources(Application.StartupPath);
 
+                    Application.Run(new Form1(new Package<AppState>(new AppStateReducer())));
+                }
+            }
 		}
 	}
 }

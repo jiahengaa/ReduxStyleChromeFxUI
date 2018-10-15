@@ -12,7 +12,8 @@ namespace CTReducer
         public AppStateReducer()
         {
             base.Diverter<TenantState>(state => state.tenant, new TenantsReducer()).
-                Diverter<CommunityState>(state=>state.community,new CommunityReducer());
+                Diverter<CommunityState>(state=>state.community,new CommunityReducer()).
+                Diverter< ChartState>(state=>state.chart,new ChartReducer());
         }
     }
 }

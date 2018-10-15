@@ -10,7 +10,7 @@ namespace BorderlessFormStyleDemoApp
     public partial class Form1 : ReduxModernBaseForm<AppState>
     {
         public Form1(Package<AppState> store)
-            : base(store, "http://res.app.local/index.html")
+            : base(store, Config.BaseUrl + "index.html")//"http://res.app.local/index.html"
         {
             InitializeComponent();
 
@@ -27,6 +27,31 @@ namespace BorderlessFormStyleDemoApp
 
             LoadHandler.OnLoadEnd += LoadHandler_OnLoadEnd;
 
+            InitCommunityActions(store);
+            InitChartActions(store);
+
+            store.Subscribe(subscription =>
+            {
+                var state = store.GetState();
+                string cmd = string.Format("app.updateData({0})", JsonConvert.SerializeObject(state));
+                ExecuteJavascript(cmd);
+            });
+
+            Store.Dispatch(new CommunityActions.loadCommunityList());
+        }
+
+        private void InitChartActions(Package<AppState> store)
+        {
+            var chartActions = GlobalObject.AddObject("chartActions");
+
+            chartActions.AddFunction("loadCommunityChartData").Execute += (func, args) =>
+            {
+                store.Dispatch(new ChartActions.loadCommunityChartData());
+            };
+        }
+
+        private void InitCommunityActions(Package<AppState> store)
+        {
             var communityActions = GlobalObject.AddObject("communityActions");
 
             communityActions.AddFunction("handleSearch").Execute += (func, args) =>
@@ -70,7 +95,7 @@ namespace BorderlessFormStyleDemoApp
                 var str = args.Arguments.FirstOrDefault(p => p.IsString);
                 var strValue = str.StringValue;
                 var id = JsonConvert.DeserializeObject<int>(strValue);
-                Store.Dispatch(new CommunityActions.deleteCommunity() {  id  = id });
+                Store.Dispatch(new CommunityActions.deleteCommunity() { id = id });
             };
 
             communityActions.AddFunction("resetForm").Execute += (func, args) =>
@@ -93,21 +118,13 @@ namespace BorderlessFormStyleDemoApp
                 var editFrom = JsonConvert.DeserializeObject<EditFrom>(strValue);
                 Store.Dispatch(new CommunityActions.updateCommunity() { editFrom = editFrom });
             };
-
-            store.Subscribe(subscription =>
-            {
-                var state = store.GetState();
-                string cmd = string.Format("app.updateData({0})", JsonConvert.SerializeObject(state));
-                ExecuteJavascript(cmd);
-            });
-
-            Store.Dispatch(new CommunityActions.loadCommunityList());
         }
 
         private void LoadHandler_OnLoadEnd(object sender, Chromium.Event.CfxOnLoadEndEventArgs e)
         {
             if (e.Frame.IsMain)
             {
+                
                 Chromium.ShowDevTools();
 
                 
