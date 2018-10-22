@@ -22,7 +22,7 @@
 ## Demo Link
 https://github.com/jiahengaa/ReduxStyleChromeFxUI/blob/master/Disk/Release.rar 点击download，解压运行
 ## Demo shot
-![example1.png](https://github.com/jiahengaa/ReduxStyleChromeFxUI/blob/master/DemoShot/example1.png)
+![demo.gif](https://github.com/jiahengaa/ReduxStyleChromeFxUI/blob/master/DemoShot/demo.gif)
 ## 负面效应
     当然所有的框架都会有其缺点，此框架也不例外。
     1.所使用技术内容涵盖非常广而杂，给研发人员带来挑战；
