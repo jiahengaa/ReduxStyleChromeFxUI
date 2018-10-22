@@ -31,3 +31,5 @@ https://github.com/jiahengaa/ReduxStyleChromeFxUI/blob/master/Disk/Release.rar �
     4.应用程序的打包大小等于chrome cef的内核大小 + 引用项目dll + web资源包大小，基本上在230M以上。
     但是引用了DevExpress等架构库，带来的麻烦不必这个小，而且会有很多dll依赖、性能、发布问题。
 
+## 📖 License
+[![forthebadge](http://forthebadge.com/images/badges/cc-0.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
