@@ -27,6 +27,10 @@ namespace ReduxCoreTest
             packageStore.Middleware(
                 store => next => action =>
                 {
+                    if(action is AddActin)
+                    {
+
+                    }
                     middlewareCounter += 1;
                     Assert.AreEqual(1, middlewareCounter);
                     Logger.LogMessage("第一个拦截器开始执行，将执行第二个拦截器");
@@ -117,7 +121,7 @@ namespace ReduxCoreTest
                     Logger.LogMessage("第二个拦截器执行完毕");
                 }
                 );
-            packageStore.Subscribe((i) =>
+            packageStore.Subscribe((i,action) =>
             {
                 Logger.LogMessage("获得广播信息");
             });

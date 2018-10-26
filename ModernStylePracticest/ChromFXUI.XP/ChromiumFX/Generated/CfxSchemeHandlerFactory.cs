@@ -76,9 +76,10 @@ namespace Chromium {
             var eventHandler = self.m_Create;
             if(eventHandler != null) eventHandler(self, e);
             e.m_isInvalid = true;
-            if(e.m_browser_wrapped == null) CfxApi.cfx_release(e.m_browser);
-            if(e.m_frame_wrapped == null) CfxApi.cfx_release(e.m_frame);
-            if(e.m_request_wrapped == null) CfxApi.cfx_release(e.m_request);
+            //兼容xp环境下
+            //if(e.m_browser_wrapped == null) CfxApi.cfx_release(e.m_browser);
+            //if(e.m_frame_wrapped == null) CfxApi.cfx_release(e.m_frame);
+            if (e.m_request_wrapped == null) CfxApi.cfx_release(e.m_request);
             __retval = CfxResourceHandler.Unwrap(e.m_returnValue);
         }
 

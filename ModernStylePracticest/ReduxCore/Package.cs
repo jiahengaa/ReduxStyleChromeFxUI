@@ -7,7 +7,7 @@ using static ReduxCore.Broadcaster;
 
 namespace ReduxCore
 {
-    public class Package<State>
+    public class Package<State>:IBasePackage<State>
     {
         /// <summary>
         /// 获取状态委托
@@ -198,7 +198,8 @@ namespace ReduxCore
 
                 Parallel.ForEach(subscriptions, new Action<StateChangedSubscriber<State>>((subscribtion) =>
                 {
-                    subscribtion(state);
+                    if(!(action is ISteal))
+                        subscribtion(state,action);
                 }));
 
                 //foreach (var subscribtion in subscriptions)
@@ -213,6 +214,11 @@ namespace ReduxCore
             public State GetState()
             {
                 return state;
+            }
+
+            public void Middleware(params Middleware<State>[] middlewares)
+            {
+                
             }
         }
     }

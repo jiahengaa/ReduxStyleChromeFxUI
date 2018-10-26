@@ -10,5 +10,5 @@ namespace ReduxCore
     /// </summary>
     /// <typeparam name="State"></typeparam>
     /// <param name="state"></param>
-    public delegate void StateChangedSubscriber<State>(State state);
+    public delegate void StateChangedSubscriber<State>(State state,object action);
 }

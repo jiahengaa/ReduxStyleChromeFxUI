@@ -45,6 +45,7 @@
     <Compile Include="ElementReducer.cs" />
     <Compile Include="IBasePackage.cs" />
     <Compile Include="InitPackageAction.cs" />
+    <Compile Include="ISteal.cs" />
     <Compile Include="Middleware.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reducer.cs" />

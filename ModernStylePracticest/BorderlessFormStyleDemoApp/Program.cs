@@ -32,7 +32,7 @@ namespace BorderlessFormStyleDemoApp
             {
                 if (Bootstrap.Load())
                 {
-                    Bootstrap.RegisterAssemblyResources(System.Reflection.Assembly.GetExecutingAssembly(), "Root");
+                    Bootstrap.RegisterAssemblyResources(System.Reflection.Assembly.GetExecutingAssembly(), "dist");
                     Bootstrap.RegisterFolderResources(Application.StartupPath);
 
                     Application.Run(new Form1(new Package<AppState>(new AppStateReducer())));

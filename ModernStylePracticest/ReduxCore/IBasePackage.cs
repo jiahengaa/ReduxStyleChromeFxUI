@@ -26,5 +26,7 @@ namespace ReduxCore
         /// </summary>
         /// <returns></returns>
         State GetState();
+
+        void Middleware(params Middleware<State>[] middlewares);
     }
 }

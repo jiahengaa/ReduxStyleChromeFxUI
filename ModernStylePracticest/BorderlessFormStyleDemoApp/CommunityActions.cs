@@ -1,16 +1,14 @@
 ﻿using CommunityActions;
 using Newtonsoft.Json;
 using Packages;
-using System;
-using System.Collections.Generic;
+using ReduxStyleUI.XP;
 using System.Linq;
-using System.Text;
 
 namespace BorderlessFormStyleDemoApp
 {
     public static class CommunityActions
     {
-        public static void ConfigCommunityActions(this ReduxModernBaseForm<AppState> chromClient)
+        public static void ConfigCommunityActions(this ReduxStyleForm<AppState> chromClient)
         {
             var communityActions = chromClient.GlobalObject.AddObject("communityActions");
 
