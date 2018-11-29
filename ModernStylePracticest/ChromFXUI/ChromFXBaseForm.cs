@@ -78,8 +78,8 @@ namespace ChromFXUI
 
 		private SplashPanelImplement splashPanel;
 		private WebBrowserFormImplement webBrowserForm;
-
-		protected readonly WebBrowserControl BrowserWrapper;
+        private Panel mainPanel;
+        protected readonly WebBrowserControl BrowserWrapper;
 
 		protected BrowserCore Chromium => BrowserWrapper?.Chromium;
 
@@ -153,12 +153,14 @@ namespace ChromFXUI
 		public ChromFXBaseForm()
 				: this(null)
 		{
+            InitializeComponent();
 
-		}
+        }
 
 		public ChromFXBaseForm(string initialUrl)
 		{
-			FormHandle = this.Handle;
+            InitializeComponent();
+            FormHandle = this.mainPanel.Handle;
 
 
 			if (!IsDesignMode)
@@ -194,7 +196,7 @@ namespace ChromFXUI
 
 		protected override void OnHandleCreated(EventArgs e)
 		{
-			FormHandle = this.Handle;
+			FormHandle = this.mainPanel.Handle;
 
 			base.OnHandleCreated(e);
 
@@ -301,9 +303,31 @@ namespace ChromFXUI
 
 			base.DefWndProc(ref m);
 		}
-		#endregion
 
 
+        #endregion
 
-	}
+        private void InitializeComponent()
+        {
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(284, 261);
+            this.mainPanel.TabIndex = 0;
+            // 
+            // ChromFXBaseForm
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.mainPanel);
+            this.Name = "ChromFXBaseForm";
+            this.ResumeLayout(false);
+
+        }
+    }
 }

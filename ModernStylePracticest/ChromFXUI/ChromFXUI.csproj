@@ -423,6 +423,9 @@
     <Compile Include="WinForm\BaseUIForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <EmbeddedResource Include="ChromFXBaseForm.resx">
+      <DependentUpon>ChromFXBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
