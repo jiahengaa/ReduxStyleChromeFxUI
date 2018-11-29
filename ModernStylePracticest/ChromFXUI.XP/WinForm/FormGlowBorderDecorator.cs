@@ -209,7 +209,7 @@ namespace ChromeFX.WinForm.ShadowForm
 						else
 						{
 							isFocused = true;
-							SetFocus();
+							//SetFocus();
 						}
 
 					}

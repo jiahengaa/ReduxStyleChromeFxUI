@@ -349,8 +349,8 @@ namespace ChromeFX.WinForm
 
 				if (IsActive)
 				{
-					shadowDecorator.SetFocus();
-				}
+                    shadowDecorator.SetFocus();
+                }
 			});
 
 			Task.Factory.StartNew(() =>
@@ -1201,7 +1201,7 @@ namespace ChromeFX.WinForm
                     }
                     else
                     {
-                        shadowDecorator.SetFocus();
+                        //shadowDecorator.SetFocus();
                         isWindowActive = true;
 
                     }
