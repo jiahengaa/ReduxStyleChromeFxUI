@@ -293,14 +293,14 @@ namespace ChromFXUI
 			}
 
 
-			if (m.Msg == (int)DefMessages.WM_CHROMEUI_APP_REGION_RBUTTONDOWN)
-			{
-				var pt = Win32.GetPostionFromPtr(m.LParam);
+			//if (m.Msg == (int)DefMessages.WM_CHROMEUI_APP_REGION_RBUTTONDOWN)
+			//{
+			//	var pt = Win32.GetPostionFromPtr(m.LParam);
 
-				var ptToScr = PointToScreen(new Point(pt.x, pt.y));
+			//	var ptToScr = PointToScreen(new Point(pt.x, pt.y));
 
-				ShowSystemMenu(this, ptToScr);
-			}
+			//	ShowSystemMenu(this, ptToScr);
+			//}
 
 			base.DefWndProc(ref m);
 		}
