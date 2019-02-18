@@ -15,7 +15,7 @@ namespace ReduxTraditionalWinformApp
 
         protected override void OnLoad(EventArgs e)
         {
-            Store.Subscribe(state =>
+            Store.Subscribe((sub,act) =>
             {
                 dataGridView1.UpdateUI(new Action(() =>
                 {

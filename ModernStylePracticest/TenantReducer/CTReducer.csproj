@@ -45,7 +45,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppStateReducer.cs" />
-    <Compile Include="ChartReducer.cs" />
     <Compile Include="CommunityReducer.cs" />
     <Compile Include="TenantsReducer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

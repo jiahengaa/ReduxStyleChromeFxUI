@@ -398,9 +398,6 @@
     <Compile Include="WinForm\FormShadowElement.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ChromFXBaseForm.resx">
-      <DependentUpon>ChromFXBaseForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>

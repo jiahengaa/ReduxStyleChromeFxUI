@@ -14,16 +14,16 @@ namespace ReduxTraditionalWinformApp
 
         protected override void OnLoad(EventArgs e)
         {
-            dataGridView1.DataSource = Store.GetState().Todos;
-            Store.Subscribe(state =>
-            {
-                dataGridView1.UpdateUI(new Action(() =>
-                {
-                    dataGridView1.DataSource = null;
-                    dataGridView1.DataSource = state.Todos;
-                }));
+            //dataGridView1.DataSource = Store.GetState().Todos;
+            //Store.Subscribe((state,action) =>
+            //{
+            //    dataGridView1.UpdateUI(new Action(() =>
+            //    {
+            //        dataGridView1.DataSource = null;
+            //        dataGridView1.DataSource = state.Todos;
+            //    }));
                 
-            });
+            //});
             base.OnLoad(e);
         }
     }

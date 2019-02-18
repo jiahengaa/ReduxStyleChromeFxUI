@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChartActions.cs" />
     <Compile Include="CommunityActions.cs" />
     <Compile Include="TenantActions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
